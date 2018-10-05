@@ -12,6 +12,7 @@ from mycroft.util.log import getLogger
 __author__ = 'j1bla02'
 
 LOGGER = getLogger(__name__)
+LOG = getLogger(__name__)
 
 # Each skill is contained within its own class, which inherits base methods
 # from the MycroftSkill class.  You extend this class as shown below.
@@ -29,7 +30,7 @@ class MuseumSkill(MycroftSkill):
     # skill's intent is matched.  The intent is defined by the IntentBuilder()
     # pieces, and is triggered when the user's utterance matches the pattern
     # defined by the keywords.  
-    @intent_handler(IntentBuilder("MuseumIntent").require("about.the.museum"))
+    @intent_handler(IntentBuilder("").require("about.the.museum"))
     def handle_about_museum_intent(self, message):
         # In this case, respond by simply speaking a canned response.
         # Mycroft will randomly speak one of the lines from the file
