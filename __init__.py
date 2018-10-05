@@ -30,8 +30,8 @@ class MuseumSkill(MycroftSkill):
     # skill's intent is matched.  The intent is defined by the IntentBuilder()
     # pieces, and is triggered when the user's utterance matches the pattern
     # defined by the keywords.  
-    @intent_handler(IntentBuilder("").require("about.the.museum"))
-    def handle_about_museum_intent(self, message):
+    @intent_handler(IntentBuilder("").require("museum"))
+    def handle_museum_intent(self, message):
         # In this case, respond by simply speaking a canned response.
         # Mycroft will randomly speak one of the lines from the file
         #    dialogs/en-us/hello.world.dialog
