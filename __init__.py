@@ -31,12 +31,16 @@ class MuseumSkill(MycroftSkill):
     # pieces, and is triggered when the user's utterance matches the pattern
     # defined by the keywords.  
     @intent_handler(IntentBuilder("").require("museum").require("money"))
-    def handle_museum_intent(self, message):
+    def handle_museum_vocab(self, message):
         # In this case, respond by simply speaking a canned response.
         # Mycroft will randomly speak one of the lines from the file
         #    dialogs/en-us/hello.world.dialog
         self.speak_dialog("about.the.museum")
 
+    @intent_handler(IntentBuilder("AboutMuseum"))
+    def handle_museum_intent(self, message):
+        self.speak_dialog("about.the.museum")
+        
     # The "stop" method defines what Mycroft does when told to stop during
     # the skill's execution. In this case, since the skill's functionality
     # is extremely simple, there is no need to override it.  If you DO
