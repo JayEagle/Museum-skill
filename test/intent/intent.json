@@ -1,0 +1,7 @@
+{
+  "utterance": "what should I do here",  
+  "intent_type": "MuseumIntent",  
+  "intent": {
+     "about.the.museum":
+  }
+}
