@@ -37,7 +37,7 @@ class MuseumSkill(MycroftSkill):
         #    dialogs/en-us/hello.world.dialog
         self.speak_dialog("about.the.museum")
 
-    @intent_handler(IntentBuilder("AboutMuseum"))
+    @intent_file_handler("AboutMuseum.intent")
     def handle_museum_intent(self, message):
         self.speak_dialog("about.the.museum")
         
